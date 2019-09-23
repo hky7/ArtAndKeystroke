@@ -1,0 +1,28 @@
+<app-header></app-header>
+<div class="product-body pt-3">
+  <div class="filter-bar container-fluid mx-auto text-center mb-3">
+    <div class="btn-group btn-group-toggle row" data-toggle="buttons"  (click)="onButtonGroupClick($event)">
+      <label class="btn btn-secondary active col-sm-3 col-xs-12">
+        <input type="radio" name="options" id="option1" autocomplete="off" (click)="sortByFeatured()" checked>Featured
+      </label>
+      <label class="btn btn-secondary col-sm-3 col-xs-12">
+        <input type="radio" name="options" id="option2" autocomplete="off" (click)="sortByAlphabetical()">A-Z
+      </label>
+      <label class="btn btn-secondary col-sm-3 col-xs-12">
+        <input type="radio" name="options" id="option3" autocomplete="off" (click)="sortByLowestPrice()">Price Lowest
+      </label>
+      <label class="btn btn-secondary col-sm-3 col-xs-12">
+        <input type="radio" name="options" id="option4" autocomplete="off" (click)="sortByHighestPrice()">Price Highest
+      </label>
+    </div>
+  </div>
+  <div class="product-container container">
+    <div class="row">
+      <div class="col-sm-3" *ngFor="let product of products">
+        <app-card [product]="product"></app-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+

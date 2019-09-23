@@ -1,0 +1,22 @@
+<style>
+  .etsy-btn {
+    background-color: #73628A;
+    border-color: #73628A;
+  }
+
+  .card {
+    max-width: 235px;
+    border: none;
+    background-color: none;
+  }
+</style>
+<div class="card text-center mb-2">
+  <img class="card-img-top" src={{product.IMAGE1}} alt="Product image cap">
+  <div class="card-body">
+    <h6 class="card-title">{{product.TITLE}}</h6>
+    <div class="card-price mb-2">${{product.PRICE}}</div>
+    <div>
+      <a href="{{product.LINK}}" target="_blank" class="etsy-btn btn btn-primary">View on Etsy</a>
+    </div>
+  </div>
+</div>
