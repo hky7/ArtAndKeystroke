@@ -34,6 +34,9 @@
           </li>
         </ul>
       </div>
+      <div *ngIf="authService.isLoggedIn" class="nav-item">
+        <a class="nav-link"  (click)="authService.logout()">Logout</a>
+      </div>
     </div>
   </nav>
 </div>

@@ -6,8 +6,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./modal-content.component.sass']
 })
 export class ModalContentComponent implements OnInit {
-  @Input() title;
-  @Input() content;
+  @Input() template;
   constructor(public activeModal: NgbActiveModal) { }
 
   ngOnInit() {

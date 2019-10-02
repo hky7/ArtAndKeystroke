@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ModalComponent} from '../modal/modal.component';
+import {AllYearModalComponent} from '../custom-modals/all-year-modal/all-year-modal.component';
+import {CactusProductModalComponent} from '../custom-modals/cactus-product-modal/cactus-product-modal.component';
 
 @Component({
   selector: 'app-portfolio-plant',
@@ -14,15 +16,10 @@ export class PortfolioPlantComponent implements OnInit {
   }
 
   openAllYearModal() {
-    const modalContent = {
-      title: 'Plants All Year Round',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ' +
-      'Donec mollis metus sed porttitor sodales. Maecenas vestibulum semper ' +
-      'lobortis. Ut luctus urna non arcu aliquam mattis. In hac habitasse platea dictumst. ' +
-      'In ligula turpis, iaculis nec tincidunt fringilla, condimentum id ante. Quisque nec ' +
-      'egestas odio, non eleifend justo.'
-    };
+    this.modal.open(AllYearModalComponent, 'custom-plant-year-modal');
+  }
 
-    this.modal.open(modalContent);
+  openCactusProductModal() {
+    this.modal.open(CactusProductModalComponent, 'custom-cactus-product-modal');
   }
 }

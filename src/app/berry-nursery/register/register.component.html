@@ -1,0 +1,45 @@
+<app-berry-header></app-berry-header>
+<div class="container pt-3">
+  <div class="row justify-content-sm-center">
+    <div class="col-sm-10 col-md-6">
+      <div class="card border-info">
+        <div class="card-header">Login</div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-12">
+              <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+                <input type="text" class="form-control mb-2" formControlName="businessName" placeholder="Business Name" required>
+                <input type="text" class="form-control mb-2" formControlName="firstName" placeholder="First Name" required autofocus>
+                <input type="text" class="form-control mb-2" formControlName="lastName" placeholder="Last Name" required>
+                <input type="text" class="form-control mb-2" formControlName="email" placeholder="Email" required>
+                <input type="text" class="form-control mb-2" formControlName="emailVerify" placeholder="Verify Email" required>
+                <span class="email-error">{{emailError}}</span>
+                <input type="text" class="form-control mb-2" formControlName="mobilePhoneNumber" placeholder="Cell Number" required>
+                <span class="cell-phone-error">{{cellPhoneError}}</span>
+                <div class="row ml-0">
+                  <input type="text" class="form-control mb-2 col-md-7" formControlName="businessPhoneNumber" placeholder="Business Number">
+                  <input type="text" class="form-control mb-2 col-md-3 ml-2" formControlName="businessExt" placeholder="Business Ext">
+                </div>
+                <span class="business-phone-error">{{businessPhoneError}}</span>
+                <input type="text" class="form-control mb-2" formControlName="addressLineOne" placeholder="Street Address" required>
+                <span class="address-error">{{addressError}}</span>
+                <input type="text" class="form-control mb-2" formControlName="addressLineTwo" placeholder="Street Address Line 2">
+                <div class="row ml-0">
+                  <input type="text" class="form-control mb-2 col-md-4 mr-2" formControlName="city" placeholder="City" required>
+                  <input type="text" class="form-control mb-2 col-md-4 mr-2" formControlName="state" placeholder="State / Province" required>
+                  <input type="text" class="form-control mb-2 col-md-3" formControlName="zipCode" placeholder="Zip Code" required>
+                </div>
+                <span class="city-state-zip-error">{{citySateZipError}}</span>
+                <input type="text" class="form-control mb-2" formControlName="password" placeholder="Password" required>
+                <input type="text" class="form-control mb-2" formControlName="verifyPassword" placeholder="Verify Password" required>
+                <span class="password-error">{{passwordError}}</span>
+                <button class="btn btn-lg btn-primary btn-block mb-1" type="submit">Register</button>
+                <div><a href="/berry-nursery/login">Already have an account? Login Here!</a></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

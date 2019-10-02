@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import {ModalContentComponent} from '../modal-content/modal-content.component';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -13,13 +12,13 @@ import { Injectable } from '@angular/core';
   styleUrls: ['./modal.component.sass']
 })
 export class ModalComponent implements OnInit {
+@Input() modalTemplate;
 
   constructor(private modalService: NgbModal) { }
 
-  open(modalContent) {
-    const modalRef = this.modalService.open(ModalContentComponent);
-    modalRef.componentInstance.title = modalContent.title;
-    modalRef.componentInstance.content = modalContent.content;
+  open(modalTemplateComponent, className) {
+    const modalRef = this.modalService.open(modalTemplateComponent, {windowClass: className});
+    this.modalTemplate = modalRef;
   }
 
   ngOnInit() {

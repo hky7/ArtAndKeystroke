@@ -7,14 +7,11 @@
   width: 100%
   div
     justify-content: center
-
+.divider
+  width: 80%
+  margin-bottom: 25px
 .icon-img
   display: none
-
-img
-  cursor: pointer
-  &:hover
-    transform: scale(1.01)
 
 .left-ad-text
   font-size: 4vw
@@ -70,12 +67,13 @@ img
   width: 235px
   font-family: 'Noto Sans JP Bold', sans-serif
   color: #503342
+  align-self: center
   img
     cursor: default
 
 .nav-title-text
   align-self: center
-  position: fixed
+  position: absolute
   line-height: 90px
   margin-left: 50px
   font-size: 3vw
@@ -130,12 +128,19 @@ img
 .side-container-wrapper
   height: 87vh
   width: 100%
+  img
+    cursor: pointer
+    &:hover
+      transform: scale(1.01)
 
   .top-row
     height: 100%
 
   .bottom-row
     height: 100%
+
+  .row
+    justify-content: center
 .sm-icon
   width: 40px
   margin-left: 5px
@@ -144,7 +149,7 @@ img
   width: 120px
 .wrapper
   height: 100vh
-  background-color: #ebf2f8
+  background-color: #e6d0d0
   overflow: hidden
 
 @media screen and (max-width: 1200px )
@@ -186,6 +191,17 @@ img
     display: inline-block
 
   .nav-title
+    width: auto
+    img
+      display: none
+    .nav-title-text
+      font-size: 5vw
+      margin-left: 0
+      position: relative
+      line-height: 20px
+      justify-content: flex-end
+
+  .divider
     display: none
 
   .icon-img

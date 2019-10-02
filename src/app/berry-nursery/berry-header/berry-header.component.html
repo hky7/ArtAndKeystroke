@@ -1,0 +1,49 @@
+<div id="header-navigation">
+  <nav class="navbar navbar-expand-lg navbar-dark dark-theme pt-0">
+    <div class="mx-lg-auto text-md-center" id="navbarSupportedContent">
+      <img class="icon-img" (click)="open = !open" src="../../../assets/icon_arrow_white.png" />
+      <div class="nav-title navbar-brand pb-0">Berry Nursery</div>
+      <div [ngClass]="this.open ? 'collapseShow' : 'collapseHidden'" class="collapsable">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link" routerLink="/berry-nursery/berry-home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-divider disabled">/</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/berry-nursery/about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-divider disabled">/</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/berry-nursery/catalog">Catalog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-divider disabled">/</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/berry-nursery/berry-contact">Contact</a>
+          </li>
+          <li [ngClass]="this.isLoggedIn ? 'loginShow' : 'loginHide'" class="nav-item">
+            <a class="nav-link nav-divider disabled">/</a>
+          </li>
+          <li [ngClass]="this.isLoggedIn ? 'loginShow' : 'loginHide'" class="nav-item">
+            <a class="nav-link" routerLink="/berry-nursery/my-account">Account</a>
+          </li>
+          <li [ngClass]="this.isLoggedIn ? 'loginShow' : 'loginHide'" class="nav-item">
+            <a class="nav-link nav-divider disabled">/</a>
+          </li>
+          <li [ngClass]="this.isLoggedIn ? 'loginShow' : 'loginHide'" class="nav-item">
+            <a class="nav-link" routerLink="/berry-nursery/view-orders">Orders</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <button class="login-btn btn primary-btn">
+      <a class="nav-link" (click)="onLoginLogoutSubmit()">{{loginLogoutBtn}}</a>
+    </button>
+  </nav>
+</div>
+
