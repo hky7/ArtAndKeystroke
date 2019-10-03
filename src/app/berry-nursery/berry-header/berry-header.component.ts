@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class BerryHeaderComponent implements OnInit {
   @Input() open;
   isLoggedIn;
+  loginLogoutBtn;
   constructor(private authService: AuthService, private router : Router) { }
 
   ngOnInit() {

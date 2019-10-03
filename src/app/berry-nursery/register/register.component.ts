@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, FormBuilder, ValidationErrors, ValidatorFn} from '@angular/forms';
 import { Validators } from '@angular/forms';
-import { verifyPasswords } from './register.directive';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',

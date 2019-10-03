@@ -36,7 +36,6 @@ import { BerryAboutComponent } from './berry-nursery/berry-about/berry-about.com
 import { BerryContactComponent } from './berry-nursery/berry-contact/berry-contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BerryHeaderComponent } from './berry-nursery/berry-header/berry-header.component';
-import { RegisterDirective } from './berry-nursery/register/register.directive';
 
 @NgModule({
   declarations: [
@@ -67,8 +66,7 @@ import { RegisterDirective } from './berry-nursery/register/register.directive';
     SettingsComponent,
     BerryAboutComponent,
     BerryContactComponent,
-    BerryHeaderComponent,
-    RegisterDirective
+    BerryHeaderComponent
   ],
   imports: [
     BrowserModule,
